@@ -6,10 +6,10 @@
 06: Spring Boot
 
 servlet-practices
-emaillist01
-emaillist02
-guestbook01
-guestbook02
+emaillist01(model1)
+emaillist02(model2)
+guestbook01(model1)
+guestbook02(model2)
 helloweb
 jstlel
 
