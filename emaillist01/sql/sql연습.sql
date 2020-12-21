@@ -10,7 +10,10 @@ insert
 values(null, '둘', '리', 'dooly@gmail.com');
 
 -- select
-  select no, first_name, last_name, email
+  select *
     from emaillist
 order by no desc;
+
+delete from emaillist where first_name like '안%';
+
 
