@@ -6,7 +6,7 @@ insert
 values (null, '안대혁', '1234', '안녕하세요~', now()); 
 
 -- select
-  select no, name, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as reg_date, message 
+  select no, name, date_format(reg_date, '%Y/%m/%d %H:%i:%s') as regDate, message 
     from guestbook
 order by reg_date desc;
 

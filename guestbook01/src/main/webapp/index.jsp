@@ -1,4 +1,11 @@
+<%@page import="java.util.List"%>
+<%@page import="com.bitacademy.guestbook.dao.GuestbookDao"%>
+<%@page import="com.bitacademy.guestbook.vo.GuestbookVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	List<GuestbookVo> list = new GuestbookDao().findAll();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +27,26 @@
 			</tr>
 		</table>
 	</form>
-
-	<br>
-	<table width=510 border=1>
-		<tr>
-			<td>[1]</td>
-			<td>안대혁</td>
-			<td>2013-01-15</td>
-			<td><a href="/guestbook01/deleteform.jsp?no=20">삭제</a></td>
-		</tr>
-		<tr>
-			<td colspan=4>안녕하세요</td>
-		</tr>
-	</table>
+	
+	<%
+		int count = list.size();
+		int index = 0;
+		for(GuestbookVo vo : list){
+	%>
+		<br>
+		<table width=510 border=1>
+			<tr>
+				<td>[<%=count-index++ %>]</td>
+				<td><%=vo.getName() %></td>
+				<td><%=vo.getRegDate() %></td>
+				<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
+			</tr>
+			<tr>
+				<td colspan=4><%=vo.getMessage().replaceAll("\n", "<br/>") %></td>
+			</tr>
+		</table>
+	<%
+		}
+	%>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
 	<form method="get" action="delete.jsp">
-		<input type='hidden' name='no' value='10'>
+		<input type='hidden' name='no' value='<%=request.getParameter("no") %>'>
 		<table>
 			<tr>
 				<td>비밀번호</td>
