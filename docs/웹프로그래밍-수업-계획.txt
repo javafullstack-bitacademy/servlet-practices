@@ -12,10 +12,10 @@ emaillist02(model2) o
 guestbook01(model1) o
 guestbook02(model2) o
 helloweb            o
-jstlel
+jstlel              o
 
 ==== mysite ====
-mysite02 (게시판추가-평가과제, Servlet/JSP) [월]
+mysite02 (게시판추가-평가과제, Servlet/JSP) [월] o
 
 mysite03
 mysite04
